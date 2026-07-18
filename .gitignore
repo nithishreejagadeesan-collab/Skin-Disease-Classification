@@ -6,4 +6,4 @@ __pycache__/
 kaggle.json
 model/
 *.h5
-*.keras
+*.kerasdataset/

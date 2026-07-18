@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skin Disease Classification</title>
+</head>
+<body>
+
+<h1>Skin Disease Classification</h1>
+
+<form action="/predict" method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <br><br>
+    <button type="submit">Predict</button>
+</form>
+
+{% if prediction %}
+<hr>
+<h2>Prediction: {{ prediction }}</h2>
+<h3>Confidence: {{ confidence }}%</h3>
+
+<img src="/{{ image }}" width="300">
+{% endif %}
+
+</body>
+</html>
